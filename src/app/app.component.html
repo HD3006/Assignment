@@ -1,0 +1,21 @@
+<h1 style="color: darkred;position:relative; ;">Assignment</h1>
+<table border="2" style="background-color:lemonchiffon;">
+  <style>
+    th{
+      color:rgb(4, 117, 169);
+      width: 15%;  ;
+    }
+   
+  </style>
+  <tr style="background-color: burlywood;">
+    <th style="margin: right 5px; ;">UserId</th>
+    <th>Id</th>
+    <th style="width: fit-content;">Title</th>
+    <th>Status</th>
+ <tr *ngFor= "let detail of userData" [ngClass]="{bgcolor:detail.completed=='completed'}">
+  <td>{{detail.userId}}</td>
+  <td>{{detail.id}}</td>
+  <td>{{detail.title}}</td>
+  <td>{{detail.completed === true ? 'Completed' : 'Not completed'}}</td>
+ </tr>
+</table>
